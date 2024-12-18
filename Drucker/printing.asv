@@ -1,0 +1,31 @@
+function printing(brick,x,y)
+    %Stift an Zielpos. bringen
+    %y-Achse
+    a = brick.motorA;
+    a.speedRegulation = 1;
+    a.limitMode = 'Tacho';
+    a.limitValue = abs(y)*20.466;
+    if y<0
+        a.power = 10;
+    else
+        a.power = -10;
+    end
+
+    %x-Achse
+    c = brick.motorC;
+    c.limitMode = 'Tacho' ;
+    if x == 0
+    c.limitValue = 1;
+    else
+        c.limitValue = abs(x)*718.5;
+    end
+    if x<0
+        c.power = 100;
+    else
+        c.power = -100;
+    end
+    a.start();
+    c.start();
+    c.waitFor();
+    a.waitFor();
+end

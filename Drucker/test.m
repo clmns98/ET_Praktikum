@@ -2,10 +2,10 @@ figure('Name', 'Number-Face', 'NumberTitle', 'off');
 axes;
 axis off;
 % %A  [0,-5], [1.25,-2.5]
-%     line([0; 2.5], [-5; 0], 'LineStyle', '-', 'Color', 'black');
-%     line([2.5; 5], [0; -5], 'LineStyle', '-', 'Color', 'black');
-%     line([5; 3.75], [-5; -2.5], 'LineStyle', '-', 'Color', 'black');
-%     line([3.75; 1.25], [-2.5; -2.5], 'LineStyle', '-', 'Color', 'black');
+    line([0; 2.5], [-5; 0], 'LineStyle', '-', 'Color', 'black');
+    line([2.5; 5], [0; -5], 'LineStyle', '-', 'Color', 'black');
+    line([5; 3.75], [-5; -2.5], 'LineStyle', '-', 'Color', 'black');
+    line([3.75; 1.25], [-2.5; -2.5], 'LineStyle', '-', 'Color', 'black');
 
 % %B  [0,-5], [0,-5]
 %     line([0; 0], [-5; 0], 'LineStyle', '-', 'Color', 'black');

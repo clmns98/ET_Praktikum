@@ -18,11 +18,11 @@ function liftPen(brickObj,ziel)
     else
         a.power = -2;
     end
-    if ziel(2) ~= 0
-        a.start();
-        a.waitFor();
+    if ziel(2) == 0
+        a.power = 0;
     end
-    
+    a.start();
+    a.waitFor();
 
     %x-Achse
     c = brickObj.motorC;
@@ -33,11 +33,9 @@ function liftPen(brickObj,ziel)
     else
         c.power = -100;
     end
-    if ziel(1) ~= 0
-        c.start();
-        c.waitFor();
-    end
     
+    c.start();
+    c.waitFor();
     %Stift senken
     b = brickObj.motorB;
     b.power = 10;
